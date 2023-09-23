@@ -22,7 +22,7 @@ interface MenuProps {
 
 export function Menu({ onAddToCart, products }: MenuProps) {
   const [isModalVisible, setIsModalVisible] = useState(false);
-  const [selectedProduct, setSelectedProduct] = useState<null | Product>(null);
+  const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
 
   function handleOpenModal(product: Product) {
     setIsModalVisible(true);
@@ -42,7 +42,7 @@ export function Menu({ onAddToCart, products }: MenuProps) {
         style={{ marginTop: 32 }}
         ItemSeparatorComponent={Separator}
         contentContainerStyle={{ paddingHorizontal: 24 }}
-        keyExtractor={(products) => products._id}
+        keyExtractor={(product) => product._id}
         renderItem={({ item: product }) => (
           <ProductContainer onPress={() => handleOpenModal(product)}>
             <ProductImage
