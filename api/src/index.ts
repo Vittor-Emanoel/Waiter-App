@@ -7,10 +7,11 @@ mongoose
   .connect(
     "mongodb+srv://vittor:P4kPwHG5oSA7F5WD@cluster0.sfxq1tq.mongodb.net/?retryWrites=true&w=majority"
   )
+
   .then(() => {
     const app = express();
 
-    const port = 3001;
+    const port = 3000;
 
     app.use(
       "/uploads",
