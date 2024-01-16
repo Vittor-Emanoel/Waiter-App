@@ -14,7 +14,7 @@ export const io = new Server(server);
 
 mongoose
   .connect(
-    "mongodb+srv://vittor:P4kPwHG5oSA7F5WD@cluster0.sfxq1tq.mongodb.net/?retryWrites=true&w=majority"
+    "dbUrl"
   )
 
   .then(() => {
